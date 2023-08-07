@@ -41,7 +41,8 @@ class _LoginState extends State<Login> {
 
   _signIn(UserModel user) {
     FirebaseAuth.instance
-        .signInWithEmailAndPassword(email: user.email, password: user.password)
+        .signInWithEmailAndPassword(
+            email: user.email!, password: user.password!)
         .then((firebaseUser) {
       Navigator.pushReplacementNamed(context, Routes.home);
     }).catchError((error) {

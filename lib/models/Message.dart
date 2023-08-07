@@ -4,14 +4,16 @@ class Message {
   String uidSender;
   String message;
   String uidReceiver;
+  String date;
 
-  Message(this.uidSender, this.message, this.uidReceiver);
+  Message(this.uidSender, this.message, this.uidReceiver, this.date);
 
   Map<String, dynamic> toMap() {
     return {
-      'idUser': uidSender,
+      'uidSender': uidSender,
       'message': message,
-      'receiver': uidReceiver,
+      'uidReceiver': uidReceiver,
+      'date': date,
     };
   }
 }

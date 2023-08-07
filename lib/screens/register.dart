@@ -57,8 +57,8 @@ class _RegisterState extends State<Register> {
   _signUp(UserModel user) {
     FirebaseAuth.instance
         .createUserWithEmailAndPassword(
-      email: user.email,
-      password: user.password,
+      email: user.email!,
+      password: user.password!,
     )
         .then((firebaseUser) {
       // Save user data on Firestore
